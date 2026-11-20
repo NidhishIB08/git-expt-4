@@ -94,3 +94,59 @@ git reset --hard 1e67298
 git merge --no-ff feature-branch -m "Merging feature branch into master"
 git log --oneline --graph --all
 git status
+
+
+
+
+
+
+
+
+1)
+git init
+git status
+echo "Hello Git" > my_file.txt
+git add my_file.txt
+git commit -m "Add my first file"
+
+2)
+git branch
+git checkout -b feature-branch
+echo "Feature changes" > feature.txt
+git add .
+git commit -m "Add feature"
+git checkout master
+git merge feature-branch
+
+3)
+git status
+git stash
+git checkout master
+git stash apply
+
+4)
+cd ~/gitexpmt
+git clone https://github.com/NidhishIB08/Git-Ext-4.git
+cd Git-Ext-4
+pwd
+ls
+git remote -v
+git status
+
+5)
+git checkout -b exp5-local
+git add .
+git commit -m "Add local changes"
+git fetch origin
+git rebase origin/main
+git push origin exp5-local
+
+6)
+git checkout -b feature-branch
+git add .
+git commit -m "Add feature changes"
+git checkout master
+git merge --no-ff feature-branch -m "Merging feature branch into master"
+git branch
+git log --oneline --graph --all
+git status
